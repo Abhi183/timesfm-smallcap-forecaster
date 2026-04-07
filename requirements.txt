@@ -1,0 +1,21 @@
+# Core dependencies
+numpy>=1.26.4
+pandas>=2.0.0
+yfinance>=0.2.40
+matplotlib>=3.8.0
+
+# TimesFM — install with extras depending on your hardware
+# GPU (CUDA):   pip install timesfm[torch]
+# CPU only:     pip install timesfm[torch]  (runs on CPU too, just slower)
+# Flax/JAX:     pip install timesfm[flax]
+# timesfm>=2.5.0  # uncomment after pip install timesfm[torch]
+
+# Optional — makes the CLI prettier
+rich>=13.0.0
+
+# Optional — Streamlit dashboard
+streamlit>=1.35.0
+
+# Optional — Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0

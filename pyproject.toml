@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "timesfm-smallcap-forecaster"
+version = "0.1.0"
+description = "Small-cap equity price forecasting powered by Google's TimesFM foundation model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Abhi183"}]
+keywords = ["timesfm", "forecasting", "stocks", "small-cap", "finance", "AI"]
+
+dependencies = [
+    "numpy>=1.26.4",
+    "pandas>=2.0.0",
+    "yfinance>=0.2.40",
+    "matplotlib>=3.8.0",
+]
+
+[project.optional-dependencies]
+model = ["timesfm[torch]>=2.5.0"]
+dashboard = ["streamlit>=1.35.0"]
+rich = ["rich>=13.0.0"]
+all = [
+    "timesfm[torch]>=2.5.0",
+    "streamlit>=1.35.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+smallcap-forecast = "cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Abhi183/timesfm-smallcap-forecaster"
+Repository = "https://github.com/Abhi183/timesfm-smallcap-forecaster"
+"TimesFM Paper" = "https://arxiv.org/abs/2310.10688"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["forecaster*"]
