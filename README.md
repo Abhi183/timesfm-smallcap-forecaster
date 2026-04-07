@@ -21,7 +21,7 @@ This project wraps [Google's TimesFM](https://github.com/google-research/timesfm
 **Why small-caps?**
 - Small-cap stocks (< $2B market cap) are often under-analysed
 - Higher signal-to-noise ratio for momentum and mean-reversion patterns
-- Micro-caps (< $300M) like GRRR can exhibit strong trending behaviour
+- Micro-caps (< $300M) can exhibit strong trending behaviour
 
 **What it does:**
 - Downloads price history via `yfinance`
